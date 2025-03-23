@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: #645728; /* King */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #ffffff; /* Body */
+  margin: 0;
+  text-shadow: 1px 1px 2px #2b2712; /* Dark */
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+}
+
+.header li {
+  margin: 0 1rem;
+}
+
+.header a {
+  text-decoration: none;
+  color: #ffffff; /* Body */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header button {
+  font: inherit;
+  background-color: transparent;
+  border: 1px solid #aa9636; /* Coral */
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header a:hover {
+  color: #aa9636; /* Coral */
+  animation: colorChange 0.5s ease-in-out;
+}
+
+.header button:hover {
+  background-color: #aa9636; /* Coral */
+  color: #2b2712; /* Dark */
+}
+
+@keyframes colorChange {
+  from { color: #ffffff; }
+  to { color: #aa9636; }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .header ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header li {
+    margin: 0.5rem 0;
+  }
+
+  .header button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
